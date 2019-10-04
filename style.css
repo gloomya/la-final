@@ -1,0 +1,329 @@
+/* colors: coffee: #5b423e, latte #aca18c; milk: #fffcef; black; */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+}
+
+body {
+  font-family: "Lato", sans-serif;
+  margin: 0;
+  padding: 0;
+}
+h1, h2, h3, h4, h5, h6 {
+    font-family: "Montserrat", sans-serif;
+}
+
+/*Navigation*/
+.topnav {
+    position: relative;
+    overflow: hidden;
+    margin-top: 1em; 
+}
+
+.topnav a {
+    float: left;
+    color: #5b423e;
+    text-align: center;
+    padding: 1em 1.2em;
+    text-decoration: none;
+    font-size: 1.2em;
+    font-family: "Montserrat", sans-serif;
+
+}
+.topnav .active {
+    font-weight: 700;
+}
+.topnav a:hover {
+    text-decoration: underline;
+}
+
+.topnav a.active {
+    font-weight: 700;
+}
+
+.topnav-centered a {
+    float: none;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.topnav-centered a span {
+    border: 2px solid #5b423e;
+    padding: 0.2em 0.4em;
+    color: #5b423e;
+}
+.topnav-centered a:hover {
+    text-decoration: none;
+}
+
+.topnav-right {
+    float: right;
+}
+/*Main Section*/
+.space {
+    padding: 2em 0;
+}
+.title-wrap {
+    text-align: center;
+    padding-bottom: 1.6em;
+}
+.who {
+    background: #fffcef;
+    padding: 3em 0;
+    
+}
+.who h3{
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    font-size: 1.4em;
+    color: black;
+    line-height: 1em;
+}
+.who h4 {
+    font-style: italic;
+    font-family: Cambria, Georgia, Times, 'Times New Roman', serif;
+    margin:0;
+}
+.who li {
+    line-height: 2;
+}
+ul.dash {
+    list-style: none;
+    margin-left: 0;
+    padding-left: 1em;
+    font-size: 1.2em;
+
+}
+ul.dash > li:before {
+    display: inline-block;
+    content: "–";
+    width: 1em;
+    margin-left: -1em;
+}
+.tooltip {
+    position: relative;
+    display: inline-block;
+    border-bottom: 1px dotted black;
+}
+.tooltip .tooltiptext {
+    visibility: hidden;
+    width: 220px;
+    background-color: black;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 0;
+    position: absolute;
+    z-index: 1;
+    bottom: 100%;
+    left: 50%;
+    margin-left: -60px;
+}
+.tooltip:hover .tooltiptext {
+    visibility: visible;
+}
+.about, .registration {
+    padding: 3em 0;
+}
+.about h2 {
+    color: #5b423e;
+    font-size: 1.8em;
+    font-weight: 400;
+}
+.about h3 {
+    color: #5b423e;
+    font-size: 1em;
+    text-align: center;
+    margin-bottom: 0;
+}
+.title-wrap p {
+    font-size: 1em !important;
+}
+.about p {
+    color: #5b423e;
+    text-align: center;
+    font-size: 0.9em;
+}
+.big-numbers {
+    font-size: 7.6em;
+    font-weight: 700;
+    color: #aca18c;
+}
+.middle p {
+    vertical-align: middle!important;
+    text-align: left!important;
+    padding-top: 1.2em;
+    font-size: 1.2em;
+}
+.title {
+    border-bottom: 3px solid #aca18c;
+    width: 30%;
+    text-transform: uppercase;
+    text-align: center;
+    letter-spacing: 1px;
+    color: #5b423e;
+    margin: 0 auto;
+    padding-bottom: 0.4em; 
+    font-weight: 700;
+    font-family: "Montserrat", sans-serif;
+    font-size: 1.6em;
+}
+.button {
+    background: #5b423e;
+    color: #fffcef;
+    padding: 1em 5em;
+    text-decoration: none;
+}
+.button:hover {
+    opacity: 0.8;
+}
+.tell {
+    color: #5b423e;
+    text-transform: uppercase;
+}
+.register-form input, .register-form textarea {
+    width: 100%;
+    padding: 0.6em;
+    margin: 0.6em 0;
+    font-family: "Lato", sans-serif;
+    background: #fffcef;
+    border-bottom: 3px solid #aca18c;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    font-size: 1.2em;
+}
+.register-form button {
+    font-size: 1em;
+    border: none;
+    margin-top: 2em;
+}
+.registration img {
+    padding: 2em;
+}
+.register-form input[type=number]::-webkit-inner-spin-button {
+    font-size: 4em;
+}
+.register-form input[type=number]::-webkit-inner-spin-button, 
+.register-form input[type=number]::-webkit-outer-spin-button {  
+
+   opacity: 1;
+
+}
+.modal {
+    display: none; 
+    position: fixed; 
+    z-index: 1; 
+    padding-top: 100px; 
+    left: 0;
+    top: 0;
+    width: 100%; 
+    height: 100%; 
+    overflow: auto; 
+    background-color: rgb(0,0,0); 
+    background-color: rgba(0,0,0,0.4); 
+}
+  
+  
+.modal-content {
+    background-color: #fefefe;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+}
+.close {
+    color: #aaaaaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+.close:hover,
+.close:focus {
+    color: #5b423e;
+    text-decoration: none;
+    cursor: pointer;
+}
+/*Footer*/
+
+footer {
+    clear: both;
+    background: #5b423e;
+    color: #fffcef;
+    min-height: 300px;
+    padding: 2em 0;
+}
+.footer address {
+    color: #fffcef;
+    font-size: 1em;
+    font-style: normal;
+}
+.footer h3, .footer h4, .footer p {
+    color: #fffcef;
+    margin-bottom:0.8em;
+}
+.footer a {
+    color: #fffcef;
+}
+.footer-form input, .footer-form textarea {
+    width: 100%;
+    padding: 0.6em;
+    margin: 0.4em 0;
+    font-family: "Lato", sans-serif;
+    background: #5b423e;
+    border-bottom: 3px solid #aca18c;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    color: #fffcef;
+    font-size: 0.8em;
+}
+.footer-form input::placeholder, .footer-form input::-webkit-placeholder {
+    color: #fffcef !important;
+}
+.footer-form textarea::placeholder,
+.footer-form textarea::-webkit-placeholder {
+    color: #fffcef!important;
+}
+.footer-form textarea::-webkit-input-placeholder,
+.footer-form textarea:-moz-placeholder,
+.footer-form textarea::-moz-placeholder,
+.footer-form textarea:-ms-input-placeholder
+{
+    color: #fffcef!important;
+}
+.smt-button {
+    background: #fffcef;
+    color: #5b423e;
+    padding: 0.8em 5em;
+    font-family: "Montserrat", sans-serif;
+    border: none;
+    cursor: pointer;
+    font-size: 1em;
+    text-transform: uppercase;
+    font-weight: 700;
+}
+.smt-button:hover {
+    opacity: 0.8;
+}
+/* Responsive navigation menu (for mobile devices) */
+@media screen and (max-width: 600px) {
+    .container {
+        margin: 0 auto;
+        width: 90%;
+    }
+    .topnav a, .topnav-right {
+        float: none;
+        display: block;
+    }
+
+    .topnav-centered a {
+        position: relative;
+        top: 0;
+        left: 0;
+        transform: none;
+    }
+}
